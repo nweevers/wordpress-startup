@@ -18,7 +18,7 @@ if( eregi("acceptatie\.onli\.nl", $_SERVER['SERVER_NAME']) ) {
 
 	require_once(dirname(__FILE__) . '/wp-config-test.php');
 
-} elseif( eregi("localhost", $_SERVER['SERVER_NAME']) ) {
+} elseif( eregi("wordpress.dev", $_SERVER['SERVER_NAME']) ) {
 
 	require_once(dirname(__FILE__) . '/wp-config-lokaal.php');
 

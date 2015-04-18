@@ -9,7 +9,7 @@ define('DB_HOST', 'localhost');
 /**
  * Waardes uit options table overrulen
  */
-define( 'WP_HOME', 'http://localhost/_startup/wordpress-startup');
+define( 'WP_HOME', 'http://wordpress.dev');
 define( 'WP_SITEURL', WP_HOME);
 
 /**
