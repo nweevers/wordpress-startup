@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body { font-size: $rem-base; }
+
+html {
+    overflow-y: scroll;
+    background: color(html,background);
+}
+
+body {
+    font-smoothing: antialiased;
+    font-family: $base-font;
+    font-weight: $weight-normal;
+    font-size: size(body);
+    color: color(text);
+}
+
+//
+// Selection
+//
+::-moz-selection {
+    background: color(primary);
+    color: #FFF;
+    text-shadow: none;
+}
+
+::selection {
+    background: color(primary);
+    color: #FFF;
+    text-shadow: none;
+}
+
+
+//
+// Horizontal rule
+//
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid color(ui);
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+//
+// Default reset lists
+//
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+//
+// Default spacing cells
+//
+th,
+td {
+    padding: 0 0 0 2px;
+}
+
+
+//
+// Remove the gap between images, videos, audio and canvas and the bottom of
+// their containers: h5bp.com/i/440
+//
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+
+//
+// Fluid images
+//
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+//
+// Address
+//
+address {
+    font-style: normal;
+}
+
+
+//
+// Strong
+//
+strong {
+    font-weight: $weight-bold;
+}
+
+
+//
+// Browse happy prompt
+//
+.browsehappy {
+    margin: 0.2em 0;
+    background: color(ui);
+    color: #000;
+    padding: 0.2em 0;
+}

@@ -2,6 +2,7 @@
 <html class="no-js" lang="nl">
     <head>
         <meta charset="utf-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
 
         <title><?php wp_title( '-', true, 'right' ); ?></title>
 
@@ -9,7 +10,13 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+        <meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/browserconfig.xml" />
+
         <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+        <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon.png">
+
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/resources/css/all.css">
+        <script src="<?php echo get_template_directory_uri(); ?>/resources/scripts/libs/header.min.js"></script>
     </head>
 
     <body>
