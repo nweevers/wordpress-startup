@@ -20,7 +20,7 @@
     </head>
 
     <body>
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Homepage <?php echo get_bloginfo( 'name' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/content/img/logo.png" alt="Logo <?php echo get_bloginfo( 'name' ); ?>"></a>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Homepage <?php echo get_bloginfo( 'name' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/resources/img/logo.png" alt="Logo <?php echo get_bloginfo( 'name' ); ?>"></a>
                     
         <nav class="mainnav">
             <?php
