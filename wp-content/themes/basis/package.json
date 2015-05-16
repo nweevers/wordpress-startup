@@ -1,12 +1,12 @@
 {
-  "name": "amimpact",
+  "name": "ONLi",
   "version": "1.0.0",
   "description": "Build project",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "a&m impact",
+  "author": "ONLi",
   "license": "ISC",
   "devDependencies": {
     "bower": "~1.2.6",
