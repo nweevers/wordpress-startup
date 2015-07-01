@@ -27,10 +27,11 @@
 			<?php
 				wp_nav_menu(
 					array(
-						'theme_location' => 'primary',
-						'container' => false,
-						'menu_class' => 'level0',
-						'items_wrap' => '<ul class="%2$s">%3$s</ul>'
+						'container' 	=> false,
+						'depth'  		=> 2,
+						'items_wrap' 	=> '<ul class="%2$s">%3$s</ul>',
+						'menu_class' 	=> 'level0',
+						'theme_location' => 'primary'
 					)
 				);
 			?>
