@@ -1,0 +1,52 @@
+.cms {
+	line-height: 1.5;
+
+	p {
+	    margin: 1em 0;
+	    padding: 0;
+	}
+
+	img {
+        max-width: 100%;
+        height: auto;
+	    border: none;
+	}
+
+	blockquote {
+		margin: 1em 0 1em 1em;
+	    font-family: Georgia, serif;
+	    color: #888;
+	}
+
+	ul {
+	    padding: 0 0 0 1em;
+		margin: 1em 0 1em 1em;
+		list-style: disc;
+	}
+
+	ol {
+	    padding: 0 0 0 1em;
+		margin: 1em 0 1em 1em;
+		list-style: decimal;
+	}
+
+	li {
+	    clear: both;
+	}
+
+	/* sub / sup */
+	sub,
+	sup {
+	    font-size: size(body) - rem-calc(2px);
+	}
+
+	/* tables */
+	table {
+        table-layout: fixed;
+	    empty-cells: show;
+	    border-color: color(text);
+	    border-collapse: collapse;
+	    border-spacing: 0;
+        width: 100%;
+	}
+}
