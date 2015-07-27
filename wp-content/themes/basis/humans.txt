@@ -1,0 +1,13 @@
+# TEAM
+
+    ONLi internet
+    http://www.onli.nl
+
+# THANKS
+
+    Niek Weevers
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Javascript, Modernizr, Normalize.css

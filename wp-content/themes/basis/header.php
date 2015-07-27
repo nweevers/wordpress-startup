@@ -11,7 +11,9 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-		<meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/browserconfig.xml" />
+		<meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/browserconfig.xml">
+
+		<link rel="author" href="<?php echo get_template_directory_uri(); ?>/humans.txt">
 
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon.png">
