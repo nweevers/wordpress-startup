@@ -45,7 +45,7 @@ if ( ! have_posts() ) { ?>
 <?php } ?>
 
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-    <?php posts_nav_link(' ', '<span class="prev">Vorige</span>', '<span class="next">Volgende</span>'); ?>
+    <div class="pagination"><?php posts_nav_link(' ', '<span class="prev">Vorige</span>', '<span class="next">Volgende</span>'); ?></div>
 <?php endif; wp_reset_query();?>
 
 <?php get_footer(); ?>

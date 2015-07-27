@@ -1,0 +1,17 @@
+.pagination {
+	padding: $padding 0;
+	text-align: center;
+
+	a {
+		display: inline-block;
+		padding: 10px $padding;
+		margin: 0 10px;
+		border: 1px solid color(ui);
+		text-decoration: none;
+		color: color(text);
+
+		&:hover {
+			border-color: color(text);
+		}
+	}
+}
