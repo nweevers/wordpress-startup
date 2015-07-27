@@ -64,3 +64,12 @@ function my_login_logo() { ?>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
+/**
+ * Remove wordpress version against hackers
+ */
+function remove_version() {
+ 	return '';
+}
+
+add_filter('the_generator', 'remove_version');
+
