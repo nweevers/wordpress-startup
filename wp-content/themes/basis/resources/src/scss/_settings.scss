@@ -1,5 +1,6 @@
 $rem-base: 16px;
 
+$padding: 15px;
 
 //
 // Use css classes
@@ -102,6 +103,9 @@ $screen: "only screen";
 
 $landscape: "#{$screen} and (orientation: landscape)";
 $portrait: "#{$screen} and (orientation: portrait)";
+
+$page-up: "#{$screen} and (min-width:#{$row-width})";
+$page-down: "#{$screen} and (max-width:#{($row-width - 1px)})";
 
 $xsmall-up: $screen;
 $xsmall-only: "#{$screen} and (max-width: #{upper-bound($xsmall-range)})";  // < 480px
