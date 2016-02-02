@@ -1,4 +1,8 @@
 <?php
+
+define( 'WP_CONTENT_DIR', '/Applications/MAMP/htdocs/_startup/wordpress-startup/content' ); // Do not remove. Removing this line could break your site. Added by Security > Settings > Change Content Directory.
+define( 'WP_CONTENT_URL', 'http://wordpress.dev/content' ); // Do not remove. Removing this line could break your site. Added by Security > Settings > Change Content Directory.
+
 /**
  * The base configurations of the WordPress.
  *
@@ -63,7 +67,7 @@ define('NONCE_SALT',       'Z8fQ+SRish#E[_k@J+*@MGgPnaP0aWa&B%ig5 xkpF,M6Jy|-i3S
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+$table_prefix  = 'z4b56mm_';
 
 /**
  * WordPress Localized Language, defaults to English.
