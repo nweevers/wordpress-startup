@@ -1,0 +1,22 @@
+{
+	"name": "project",
+	"description": "Frontend packages",
+	"version": "0.1.0",
+	"authors": [
+		"ONLi internet"
+	],
+	"license": "ISC",
+	"homepage": "",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"src/bower_components",
+		"test",
+		"tests"
+	],
+  	"dependencies": {
+    	"fastclick": "~1.0.6",
+    	"headjs": "~1.0.3"
+  	}
+}

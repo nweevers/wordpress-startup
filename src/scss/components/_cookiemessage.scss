@@ -1,0 +1,61 @@
+@if $use-cookies {
+	$cookiemessage__bgcolor--default   	: $global-border-color;
+    $cookiemessage__background--accept  : #749e2b;
+    $cookiemessage__background--decline : #c61b16;
+    $cookiemessage__radius  			: 5px;
+    $cookiemessage__shadow  			: 1px 1px 5px 0px rgba(#333, 0.4);
+
+	.cookiemessage {
+		position: fixed;
+		bottom: 30px;
+		left: 30px;
+		width: 80%;
+		max-width: 450px;
+		border-radius: $cookiemessage__radius;
+		box-shadow: $cookiemessage__shadow;
+		background: $cookiemessage__bgcolor--default;
+		transition: all .3s ease-in-out;
+
+		&__inner {
+			padding: 30px 15px;
+		}
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&__button {
+			&--accept {
+				background-color: $cookiemessage__background--accept;
+				border-color: $cookiemessage__background--accept;
+
+				.no-touch &:hover,
+		        &:focus {
+		        	background-color: darken($cookiemessage__background--accept, 15%);
+		        }
+			}
+
+			&--decline {
+				background: none;
+				border: 0;
+				text-decoration: underline;
+
+				.no-touch &:hover,
+		        &:focus {
+		        	cursor: pointer;
+		        }
+			}
+		}
+	}
+
+	.cookie-settings {
+		color: $primary-color;
+		text-decoration: underline;
+
+		&:hover {
+			color: $secondary-color;
+			cursor: pointer;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+@if $use-button {
+    $button__background             : $primary-color;
+    $button__background--secondary  : #EEE;
+
+    $button__color                  : #FFF;
+    $button__color--secondary       : $global-font-color;
+
+    $button__fontsize--large        : $global-font-size + 2px;
+
+    $button__padding                : 9px 16px;
+    $button__padding--large         : 14px 21px;
+
+    .button {
+        display: inline-block;
+        position: relative;
+        width: auto;
+        padding: $button__padding;
+        margin: 0;
+        border: {
+            width: 1px;
+            style: solid;
+            color: $button__background;
+            radius: $global-radius;
+        }
+        line-height: 1;
+        font: {
+            family: $global-font-family;
+            weight: $global-weight-bold;
+            size: $global-font-size;
+        }
+        text: {
+            align: center;
+            decoration: none;
+        }
+        color: $button__color;
+        background-color: $button__background;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        .no-touchevents &:hover,
+        &:focus {
+            color: $button__color;
+            background-color: lighten($button__background,10%);
+        }
+
+        &:active,
+        &.active {
+            outline: 0;
+        }
+
+
+        //
+        // Secondary
+        //
+        &--secondary {
+            color: $button__color--secondary;
+            background-color: $button__background--secondary;
+
+            .no-touchevents &:hover {
+                background-color: lighten($button__background--secondary, 5%);
+            }
+        }
+
+
+        //
+        // Large
+        //
+        &--large {
+            padding: $button__padding--large;
+            font-size: $button__fontsize--large;
+        }
+    }
+
+    /**
+     * Wrapper om de buttons
+     */
+    .buttons {
+
+    }
+}

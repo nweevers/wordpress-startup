@@ -1,0 +1,90 @@
+//
+// Use css classes
+//
+$use-visibility:    false;
+$use-grid:          false;
+$use-flex-grid:     false;
+$use-form:          true;
+$use-button:        true;
+$use-locations:     true;
+$use-pagination:    true;
+$use-social:        true;
+$use-cookies:       true;
+
+//
+// Global
+//
+$rem-base: 16px;
+$total-columns: 12;
+$global-width: 1000px;
+$global-padding: 15px;
+$global-radius: 3px;
+$column-width: 150px;
+
+//
+// Fonts
+//
+$global-font-family: Arial, sans-serif;
+$header-font-family: $global-font-family;
+
+$global-font-size: 14px;
+$large-font-size: 16px;
+$small-font-size: 12px;
+
+$global-weight-normal: 400;
+$global-weight-bold: 700;
+
+//
+// Colors
+//
+$blauw: #2f619f;
+$rood: #c61b16;
+
+$primary-color: $blauw;
+$secondary-color: $rood;
+$global-font-color: #333;
+$global-border-color: #ececec;
+
+$html-background: #FFF;
+
+//
+// Z-index
+//
+$header-zindex: 100;
+
+//
+// Sizes
+//
+$sizes: (
+    xsmall: (
+        h1: 24px,
+        h2: 20px,
+        h3: 19px,
+        h4: 18px,
+        h5: 17px,
+        h6: 16px
+    ),
+    medium: (
+        h1: 48px,
+        h2: 40px,
+        h3: 31px,
+        h4: 25px,
+        h5: 20px,
+        h6: 16px
+    )
+);
+
+//
+// Breakpoints
+//
+$breakpoints: (
+    xsmall: 0,
+    small: 480px,
+    medium: 768px,
+    large: 1024px,
+    xlarge: 1200px,
+    xxlarge: 1440px,
+    page: $global-width
+);
+
+$breakpoint-classes: (small medium large);

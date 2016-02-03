@@ -1,0 +1,18 @@
+%heading {
+    margin: 0 0 1em 0;
+    font-weight: $global-weight-bold;
+    font-family: $header-font-family;
+}
+
+// Heading sizes
+@each $size, $headers in $sizes {
+    @include breakpoint($size) {
+        @each $header, $font-size in $headers {
+            #{$header},
+            .#{$header} {
+                @extend %heading;
+                font-size: $font-size;
+            }
+        }
+    }
+}

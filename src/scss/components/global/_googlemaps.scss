@@ -1,0 +1,24 @@
+.googlemaps {
+    font-family: $global-font-family;
+    font-size: $global-font-size;
+    text-align: left;
+    color: $global-font-color;
+
+    a { color: $global-font-color; }
+    div[title="Street View afsluiten"] img { cursor: pointer; }
+    input[type="text"] { width: 210px; }
+    input[type=submit] {
+        @extend .button !optional;
+        margin: 5px 0 0 0;
+    }
+
+    img {
+        max-width: inherit;
+    }
+}
+
+.gmnoprint  div,
+.gmnoprint  span,
+.gmnoprint  a {
+    word-wrap: normal;
+}

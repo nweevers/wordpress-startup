@@ -1,0 +1,254 @@
+/**
+ * Documentatie: https://github.com/am-impact/html-parts-form
+ */
+@if $use-form {
+    $form__background--input    : #FFF;
+    $form__color--placeholder   : #999;
+    $form__color--error         : #c60f13;
+    $form__radius--input        : $global-radius;
+    $form__width--checkbox      : 16px;
+    $form__width--number        : 100px;
+
+    fieldset {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        // Chrome and Firefox set a `min-width: -webkit-min-content;` on fieldsets,
+        // so we reset that to ensure it behaves more like a standard block element.
+        // See https://github.com/twbs/bootstrap/issues/12359.
+        min-width: 0;
+    }
+
+    legend {
+        @extend .visuallyhidden;
+    }
+
+
+    /**
+     * Input elements
+     */
+    #{text-inputs()},
+    select,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid $global-border-color;
+        border-radius: $form__radius--input;
+        font-family: $global-font-family;
+        font-size: $global-font-size;
+        resize: none;
+        background: $form__background--input;
+
+        .no-touchevents &:hover {
+            border-color: darken($global-border-color, 10%);
+        }
+
+        &:focus {
+            border-color: darken($global-border-color, 20%);
+            outline: none;
+        }
+    }
+
+    input[type=number] {
+        max-width: $form__width--number;
+    }
+
+    textarea {
+        overflow: auto;
+        resize: vertical;
+    }
+
+    input[type=radio],
+    input[type=checkbox] {
+        padding: 0;
+        border: none;
+    }
+
+
+    /**
+     * Select box
+     */
+    .select {
+        display: inline-block;
+        position: relative;
+        border: 1px solid $global-border-color;
+        border-radius: $form__radius--input;
+
+        &--block {
+            display: block;
+        }
+
+        // Pijltje
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 2;
+            right: 14px;
+            top: 50%;
+            width: 6px;
+            height: 6px;
+            border: {
+                width: 0 3px 3px 0;
+                style: solid;
+                color: $global-font-color;
+            }
+            transform: translateY(-70%) rotate(45deg);
+        }
+
+        select {
+            position: relative;
+            z-index: 3;
+            padding-right: 48px;
+            border: none;
+            -webkit-appearance: none;
+            background: transparent;
+        }
+
+        select::-ms-expand {
+            display: none;
+        }
+    }
+
+    @-moz-document url-prefix() {
+        .select:before,
+        .select:after {
+            display: none;
+        }
+    }
+
+
+    /**
+     * Checkbox & Radio
+     */
+    input[type=checkbox],
+    input[type=radio] {
+        position: relative;
+        width: $form__width--checkbox;
+        height: $form__width--checkbox;
+        padding: 0;
+        border: 1px solid $global-border-color;
+        outline: none;
+        background: #FFF;
+        -webkit-appearance: none;
+    }
+
+    input[type=checkbox] {
+        border-radius: $form__radius--input;
+
+        &:checked:before {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 0;
+            width: 4px;
+            height: 8px;
+            border: {
+                style: solid;
+                width: 0 3px 3px 0;
+                color: $secondary-color;
+            }
+            transform: rotate(40deg);
+        }
+    }
+
+    input[type=radio] {
+        border-radius: 50%;
+
+        &:checked:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $secondary-color;
+        }
+    }
+
+
+    /**
+     * Input file
+     */
+    input[type=file] {
+        outline: none;
+        border: 1px solid $global-border-color;
+        border-radius: $form__radius--input;
+
+        &::-webkit-file-upload-button {
+            padding: 10px $global-padding;
+            border: none;
+            border-radius: $form__radius--input 0 0 $form__radius--input;
+            color: #FFF;
+            outline: none;
+            background: $secondary-color;
+        }
+    }
+
+
+    /**
+     * Placeholder
+     */
+    input[placeholder] { text-overflow: ellipsis; }
+    ::-moz-placeholder { text-overflow: ellipsis; color: $form__color--placeholder; }
+    ::-webkit-input-placeholder { text-overflow: ellipsis; color: $form__color--placeholder; }
+    input:-moz-placeholder { text-overflow: ellipsis; color: $form__color--placeholder; }
+    input:-ms-input-placeholder { text-overflow: ellipsis; color: $form__color--placeholder; }
+
+
+    /**
+     * Validatie
+     */
+    .required {
+        &:after {
+            content: '\002A';
+            padding: 0 0 0 5px;
+        }
+    }
+
+    .validation_error {
+        border-color: $form__color--error !important;
+    }
+
+    .validation_field_message {
+        display: block;
+        padding: 0 0 0 5px;
+        color: $form__color--error;
+    }
+
+    .errors {
+        color: $form__color--error;
+    }
+
+
+    /**
+     * Form
+     */
+    .form {
+        &__row {
+            margin: $global-padding 0;
+        }
+
+        &__note {
+            margin: 0 0 $global-padding 0;
+        }
+
+        @include breakpoint(medium) {
+            &__row {
+                display: flex;
+            }
+
+            &__label {
+                flex: 0 0 35%;
+            }
+
+            &__field {
+                flex: 0 0 65%;
+            }
+        }
+    }
+
+
+}

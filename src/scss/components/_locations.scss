@@ -1,0 +1,14 @@
+/**
+ * Contactpagina locaties voor de maps
+ */
+@if $use-locations {
+    .locations {
+        position: absolute;
+        left: -900em;
+
+        &__maps {
+            height: 400px;
+            margin-top: 30px;
+        }
+    }
+}

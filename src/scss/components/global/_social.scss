@@ -1,0 +1,56 @@
+@if $use-form {
+    $social__color--facebook: #3b5998;
+    $social__color--linkedin: #0077b5;
+    $social__color--twitter: #55acee;
+    $social__color--instagram: #3f729b;
+    $social__color--youtube: #cd201f;
+    $social__color--pinterest: #bd081c;
+    $social__color--googleplus: #dc4e41;
+
+    .social {
+        li {
+            display: inline-block;
+        }
+
+        &__item {
+            display: block;
+            overflow: hidden;
+            text-indent: -900em;
+
+            &--facebook {
+                background-color: $social__color--facebook;
+                @include sprite( $sprite_social-facebook );
+            }
+
+            &--linkedin {
+                background-color: $social__color--linkedin;
+                @include sprite( $sprite_social-linkedin );
+            }
+
+            &--twitter {
+                background-color: $social__color--twitter;
+                @include sprite( $sprite_social-twitter );
+            }
+
+            &--instagram {
+                background-color: $social__color--instagram;
+                @include sprite( $sprite_social-instagram );
+            }
+
+            &--youtube {
+                background-color: $social__color--youtube;
+                @include sprite( $sprite_social-youtube );
+            }
+
+            &--pinterest {
+                background-color: $social__color--pinterest;
+                @include sprite( $sprite_social-pinterest );
+            }
+
+            &--googleplus {
+                background-color: $social__color--googleplus;
+                @include sprite( $sprite_social-googleplus );
+            }
+        }
+    }
+}

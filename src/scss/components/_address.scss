@@ -1,0 +1,19 @@
+/**
+ * Adres in de footer
+ */
+.address {
+    dl {
+        margin: 0;
+    }
+
+    dt {
+        display: inline-block;
+        width: 15%;
+    }
+
+    dd {
+        display: inline-block;
+        width: 83%;
+        margin: 0;
+    }
+}
