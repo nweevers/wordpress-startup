@@ -6,7 +6,7 @@
 
         <script>
             head.js(
-                { all: 'resources/scripts/all.min.js' }
+                { all: '<?php echo get_template_directory_uri(); ?>/resources/scripts/all.min.js' }
             );
         </script>
     </body>
