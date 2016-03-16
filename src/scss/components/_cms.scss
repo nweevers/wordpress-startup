@@ -1,0 +1,81 @@
+.cms{
+	font-family: $global-font-family;
+	font-size: $global-font-size;
+    line-height: 1.5;
+	color: $global-font-color;
+
+    a:visited { color: lighten($global-font-color,5%); }
+
+	p {
+	    margin: 1em 0;
+	    padding: 0;
+	}
+
+	img {
+        max-width: 100%;
+        height: auto;
+	    border: none;
+	}
+
+	blockquote {
+		margin: 1em 0 1em 1em;
+	    font-family: Georgia, serif;
+	    color: #888;
+	}
+
+	ul {
+	    padding: 0 0 0 1em;
+		margin: 1em 0 1em 1em;
+		list-style: disc;
+	}
+
+	ol {
+	    padding: 0 0 0 1em;
+		margin: 1em 0 1em 1em;
+		list-style: decimal;
+	}
+
+	li {
+	    clear: both;
+	}
+
+	/* sub / sup */
+	sub,
+	sup {
+	    font-size: $global-font-size - 2px;
+	}
+
+	/* tables */
+	table {
+        table-layout: fixed;
+	    empty-cells: show;
+	    border-color: $global-font-color;
+	    border-collapse: collapse;
+	    border-spacing: 0;
+        width: 100%;
+	}
+
+	/*
+	 * Editor style list
+	 */
+	h2 {
+		font-family: $global-font-family;
+	}
+
+	h3 {
+		font-family: $global-font-family;
+	}
+
+	h4 {
+		font-family: $global-font-family;
+	}
+
+	@include breakpoint(xsmall down) {
+	    table {
+	        display: block;
+	        max-width: 100%;
+	        width: auto !important;
+	    }
+	}
+}
+

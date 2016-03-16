@@ -39,12 +39,9 @@
 
 // Components
 @import "components/address",
-		"components/cookiemessage",
+		"components/cms",
 		"components/locations",
 		"components/pagination";
-
-// Specific
-@import "redactor";
 
 // Print styles
 @import "generic/print";
