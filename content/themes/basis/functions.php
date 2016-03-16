@@ -18,6 +18,33 @@ add_action( 'after_setup_theme', 'theme_setup' );
 
 
 /**
+ * Yoast SEO breadcrumbs
+ * Fix voor custom post types
+ */
+function my_wpseo_breadcrumb_links( $links ) {
+    if ( is_single() ) {
+        $cpt_object = get_post_type_object( get_post_type() );
+
+        if ( !$cpt_object->_builtin ) {
+            $landing_page = get_page_by_path( $cpt_object->rewrite['slug'] );
+
+            if( isset($landing_page) ) {
+           		array_splice( $links, 1, 0, array(
+           		    array(
+           		        'id' => $landing_page->ID
+           		    )
+           		)); 	
+            }
+        }
+    }
+ 
+    return $links;
+}
+
+add_filter( 'wpseo_breadcrumb_links', 'my_wpseo_breadcrumb_links' );
+
+
+/**
  * Overzicht teksten
  */
 function custom_excerpt_length( $length ) {
