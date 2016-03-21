@@ -69,6 +69,18 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 
 /**
+ * Verwijder overbodige classes uit navigaties
+ * Behalve de active classes
+ */
+add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1);
+add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
+add_filter('page_css_class', 'my_css_attributes_filter', 100, 1);
+function my_css_attributes_filter($var) {
+  	return is_array($var) ? array_intersect($var, array('current-menu-item','current-menu-parent')) : '';
+}
+
+
+/**
  * Editor toegang geven tot menu
  */
 $roleEditor = get_role( 'editor' );
