@@ -2,12 +2,36 @@
 .htaccess
 sitemap.xml
 sitemap.xml.gz
-wp-content/advanced-cache.php
-wp-content/backup-db/
-wp-content/backups/
-wp-content/blogs.dir/
-wp-content/cache/
-wp-content/upgrade/
-wp-content/uploads/
-wp-content/wp-cache-config.php
+content/advanced-cache.php
+content/backup-db/
+content/backups/
+content/blogs.dir/
+content/cache/
+content/upgrade/
+content/uploads/
+content/wp-cache-config.php
+content/themes/basis/node_modules
+content/themes/basis/resources/scripts
+content/themes/basis/resources/css
+content/themes/basis/resources/sprites
+
+# Composer
+composer.lock
+vendor/*
+
+# Sass
+.sass-cache
+# .map
+
+# Codekit
+*-ck.js
+config.codekit
+
+# Other files
+.DS_Store
+Thumbs.db
+
+# Grunt
 node_modules
+
+npm-debug.log
