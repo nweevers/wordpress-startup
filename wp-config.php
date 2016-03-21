@@ -3,6 +3,9 @@
 define( 'WP_CONTENT_DIR', '/Applications/MAMP/htdocs/_startup/wordpress-startup/content' ); // Do not remove. Removing this line could break your site. Added by Security > Settings > Change Content Directory.
 define( 'WP_CONTENT_URL', 'http://wordpress.dev/content' ); // Do not remove. Removing this line could break your site. Added by Security > Settings > Change Content Directory.
 
+/* Configuratie errors Contact forms 7 verbergen */
+define( 'WPCF7_VALIDATE_CONFIGURATION', false );
+
 /**
  * The base configurations of the WordPress.
  *
