@@ -21,11 +21,11 @@ define( 'WPCF7_VALIDATE_CONFIGURATION', false );
  * @package WordPress
  */
 
-if( eregi("acceptatie\.onli\.nl", $_SERVER['SERVER_NAME']) ) {
+if( $_SERVER['SERVER_NAME'] == 'acceptatie.onli.nl' ) {
 
 	require_once(dirname(__FILE__) . '/wp-config-test.php');
 
-} elseif( eregi("wordpress.dev", $_SERVER['SERVER_NAME']) ) {
+} elseif( $_SERVER['SERVER_NAME'] == 'wordpress.dev' ) {
 
 	require_once(dirname(__FILE__) . '/wp-config-lokaal.php');
 

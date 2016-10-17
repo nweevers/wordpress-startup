@@ -1,5 +1,7 @@
 <?php
 
+setlocale(LC_TIME, 'NL_nl');
+
 if ( ! function_exists( 'theme_setup' ) ) :
 
 function theme_setup() {
@@ -33,11 +35,11 @@ function my_wpseo_breadcrumb_links( $links ) {
            		    array(
            		        'id' => $landing_page->ID
            		    )
-           		)); 	
+           		));
             }
         }
     }
- 
+
     return $links;
 }
 
@@ -131,7 +133,7 @@ function edit_wp_menu() {
 	//remove_menu_page( 'plugins.php' );                //Plugins
 	//remove_menu_page( 'users.php' );                  //Users
 	remove_menu_page( 'tools.php' );                  //Tools
-	//remove_menu_page( 'options-general.php' );        //Settings	
+	//remove_menu_page( 'options-general.php' );        //Settings
 
 	//---------
 	// Rename
