@@ -179,6 +179,14 @@ function change_post_labels() {
 add_action( 'admin_menu', 'edit_wp_menu' );
 add_action( 'init', 'change_post_labels' );
 
+/**
+ * Remove tags support from posts
+ */
+function custom_unregister_tags() {
+    unregister_taxonomy_for_object_type('post_tag', 'post');
+}
+add_action('init', 'custom_unregister_tags');
+
 
 //============
 // Admin bar
