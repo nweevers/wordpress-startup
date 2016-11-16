@@ -1,0 +1,24 @@
+/**
+ * Standaard WP gallery
+ */
+.gallery {
+	margin: 0 -5px !important;
+
+	img {
+		border: none !important;
+	}
+
+	&-item {
+		margin-left: 5px;
+		margin-right: 5px;
+		width: calc( 50% - 10px ) !important;
+	}
+
+	@media #{$xsmall-only} {
+		&-item {
+			float: none !important;
+			width: auto !important;
+			text-align: left !important;
+		}
+	}
+}
